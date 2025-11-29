@@ -234,20 +234,25 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
-.social-icons {
+.social-media a {
     display: flex;
-    gap: 1.5rem;
-}
-
-.social-icons a {
-    font-size: 2rem;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
     color: #bdbdbd;
-    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-media a:hover {
     color: var(--primary-color);
-    transform: scale(1.1);
+}
+
+.social-media a i {
+    font-size: 1.5rem;
+    width: 20px; /* To align the text */
+    text-align: center;
 }
 
 @media (max-width: 768px) {
