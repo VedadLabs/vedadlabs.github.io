@@ -1,1 +1,0 @@
-# vedadlabs.github.io
