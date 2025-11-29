@@ -102,7 +102,7 @@ main > section:last-of-type {
 .hero {
     background-color: var(--alternate-section-color);
     text-align: center;
-    padding: 4rem 0; /* Smaller welcome banner */
+    padding: 3rem 0;
 }
 
 #services {
