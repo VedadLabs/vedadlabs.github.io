@@ -249,10 +249,10 @@ footer a:hover {
     color: var(--primary-color);
 }
 
-.social-media a i {
-    font-size: 1.5rem;
-    width: 20px; /* To align the text */
-    text-align: center;
+.social-media a svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
 }
 
 @media (max-width: 768px) {
