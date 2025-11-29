@@ -159,16 +159,14 @@ section h2 {
 .service-item {
     text-align: center;
     padding: 30px;
-    border: none;
+    border: 1px solid #d1d9e6;
     border-radius: var(--border-radius);
-    background-color: var(--section-bg-color);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    transition: border-color 0.3s ease;
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
 }
 
 .service-item img {
