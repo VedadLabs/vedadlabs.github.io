@@ -1,13 +1,14 @@
 :root {
-    --primary-color: #2979ff; /* A slightly more vibrant, yet readable blue */
-    --secondary-color: #f7f9fc; /* A very light, patterned grey */
-    --section-bg-color: #ffffff; /* White for content sections */
-    --accent-color: #4caf50;   /* A standard, friendly green */
-    --text-color: #212121;      /* Very dark gray for high contrast */
-    --text-color-light: #ffffff; /* White */
-    --border-radius: 8px;
+    --primary-color: #2979ff;
+    --secondary-color: #f8f9fa; /* Lighter grey for body */
+    --section-bg-color: #ffffff;
+    --alternate-section-color: #eef6ff; /* A very light, soothing blue */
+    --accent-color: #4caf50;
+    --text-color: #212121;
+    --text-color-light: #ffffff;
+    --border-radius: 10px;
     --container-width: 960px;
-    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow: 0 5px 20px rgba(0,0,0,0.07);
     --font-family-sans-serif: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -23,7 +24,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--secondary-color);
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23eef2f7' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     color: var(--text-color);
     direction: rtl;
     text-align: right;
@@ -46,7 +46,7 @@ header {
     background-color: var(--section-bg-color);
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -90,22 +90,29 @@ header nav a.active {
 }
 
 main > section {
-    padding: 5rem 0;
-    background-color: var(--section-bg-color);
-    margin-bottom: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    padding: 6rem 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-main > section:first-of-type {
-    border-radius: 0;
-    box-shadow: none;
+main > section:last-of-type {
+    border-bottom: none;
 }
-
 
 .hero {
-    background-color: #e3f2fd;
+    background-color: var(--alternate-section-color);
     text-align: center;
+}
+
+#services {
+    background-color: var(--section-bg-color);
+}
+
+#patient-guide {
+    background-color: var(--alternate-section-color);
+}
+
+#about-us {
+    background-color: var(--section-bg-color);
 }
 
 .hero h2 {
@@ -128,32 +135,39 @@ main > section:first-of-type {
     border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: 700;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
     background-color: #1976d2;
+    transform: translateY(-2px);
 }
 
 section h2 {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.2rem;
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
 }
 
 .service-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .service-item {
     text-align: center;
-    padding: 25px;
-    border: 1px solid #e0e0e0;
+    padding: 30px;
+    border: none;
     border-radius: var(--border-radius);
-    background-color: #fafafa;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    background-color: var(--section-bg-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .service-item img {
@@ -169,19 +183,20 @@ section h2 {
 .service-item p {
     font-size: 1rem;
     color: #616161;
+    line-height: 1.7;
 }
 
 .about-us p, .patient-guide p {
     max-width: 750px;
     margin: 0 auto;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 footer {
-    background-color: #263238;
+    background-color: #1a2327;
     color: #eeeeee;
-    padding: 3rem 0 1.5rem;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 4rem 0 0;
 }
 
 footer .container {
@@ -189,6 +204,7 @@ footer .container {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
+    padding-bottom: 3rem;
 }
 
 footer h3 {
@@ -210,10 +226,10 @@ footer a:hover {
 }
 
 .copy-right {
-    background-color: #1a2327;
+    background-color: #11181b;
     color: #9e9e9e;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     margin-top: 2rem;
     font-size: 0.9rem;
 }
@@ -233,7 +249,7 @@ footer a:hover {
     }
 
     main > section {
-        padding: 3rem 0;
+        padding: 4rem 0;
     }
 
     .hero h2 {
