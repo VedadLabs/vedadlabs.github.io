@@ -170,9 +170,9 @@ section h2 {
     border-color: var(--primary-color);
 }
 
-.service-item img {
-    max-width: 60px;
+.service-item svg {
     margin-bottom: 1.5rem;
+    color: var(--primary-color);
 }
 
 .service-item h3 {
