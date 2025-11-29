@@ -1,7 +1,7 @@
 :root {
     --primary-color: #2979ff;
-    --secondary-color: #f8f9fa; /* Lighter grey for body */
-    --section-bg-color: #ffffff;
+    --secondary-color: #f8f9fa; /* Lighter grey for body and some sections */
+    --section-bg-color: #ffffff; /* White for other sections */
     --alternate-section-color: #eef6ff; /* A very light, soothing blue */
     --accent-color: #4caf50;
     --text-color: #212121;
@@ -101,23 +101,24 @@ main > section:last-of-type {
 .hero {
     background-color: var(--alternate-section-color);
     text-align: center;
+    padding: 4rem 0; /* Smaller welcome banner */
 }
 
 #services {
-    background-color: var(--section-bg-color);
+    background-color: var(--secondary-color); /* Light grey */
 }
 
 #patient-guide {
-    background-color: var(--alternate-section-color);
+    background-color: var(--alternate-section-color); /* Light blue */
 }
 
 #about-us {
-    background-color: var(--section-bg-color);
+    background-color: var(--secondary-color); /* Light grey */
 }
 
 .hero h2 {
     margin: 0 0 1rem;
-    font-size: 2.8rem;
+    font-size: 2.5rem; /* Smaller font size for hero heading */
     font-weight: 700;
 }
 
