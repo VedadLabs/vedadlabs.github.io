@@ -234,6 +234,22 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #bdbdbd;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
