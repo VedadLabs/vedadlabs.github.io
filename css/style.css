@@ -1,8 +1,9 @@
 :root {
     --primary-color: #2979ff;
-    --secondary-color: #f8f9fa; /* Lighter grey for body and some sections */
+    --secondary-color: #f8f9fa; /* Lighter grey for body */
     --section-bg-color: #ffffff; /* White for other sections */
     --alternate-section-color: #eef6ff; /* A very light, soothing blue */
+    --section-alternate-bg: #f0f2f5; /* A new, slightly darker light grey for sections */
     --accent-color: #4caf50;
     --text-color: #212121;
     --text-color-light: #ffffff;
@@ -105,7 +106,7 @@ main > section:last-of-type {
 }
 
 #services {
-    background-color: var(--secondary-color); /* Light grey */
+    background-color: var(--section-alternate-bg); /* New light grey */
 }
 
 #patient-guide {
@@ -113,7 +114,7 @@ main > section:last-of-type {
 }
 
 #about-us {
-    background-color: var(--secondary-color); /* Light grey */
+    background-color: var(--section-alternate-bg); /* New light grey */
 }
 
 .hero h2 {
