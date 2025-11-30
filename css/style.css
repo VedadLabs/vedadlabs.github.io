@@ -293,4 +293,8 @@ footer a:hover {
     .service-items {
         grid-template-columns: 1fr; /* Stack cards vertically */
     }
+
+    .service-items.four-items {
+        grid-template-columns: 1fr; /* Ensure four-item section stacks vertically */
+    }
 }
