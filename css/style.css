@@ -1,15 +1,16 @@
 :root {
-    --primary-color: #2979ff;
+    --primary-color: #3f51b5; /* A softer, more professional blue */
     --secondary-color: #f8f9fa; /* Lighter grey for body */
     --section-bg-color: #ffffff; /* White for other sections */
     --alternate-section-color: #eef6ff; /* A very light, soothing blue */
     --section-alternate-bg: #f0f2f5; /* A new, slightly darker light grey for sections */
-    --accent-color: #4caf50;
-    --text-color: #212121;
-    --text-color-light: #ffffff;
+    --accent-color: #4CAF50;   /* Muted green */
+    --text-color: #212121;      /* Very dark gray for high contrast */
+    --text-color-light: #ffffff; /* White */
     --border-radius: 10px;
     --container-width: 960px;
     --shadow: 0 5px 20px rgba(0,0,0,0.07);
+    --shadow-light: 0 2px 8px rgba(0,0,0,0.05); /* Lighter shadow for elements */
     --font-family-sans-serif: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -22,6 +23,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.9;
+    letter-spacing: 0.02em; /* Subtle letter spacing */
     margin: 0;
     padding: 0;
     background-color: var(--secondary-color);
@@ -34,7 +36,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    color: #1a237e;
+    color: #1a237e; /* Darker blue for headings */
+    letter-spacing: 0.01em;
 }
 
 .container {
@@ -47,7 +50,7 @@ header {
     background-color: var(--section-bg-color);
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-light); /* Lighter shadow */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -61,7 +64,7 @@ header .container {
 
 header .logo h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Adjusted size */
     color: var(--primary-color);
     font-weight: 700;
 }
@@ -81,13 +84,14 @@ header nav a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 1rem; /* Adjusted size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 header nav a:hover,
 header nav a.active {
     color: var(--primary-color);
+    transform: translateY(-2px); /* Subtle hover effect */
 }
 
 main > section {
@@ -106,20 +110,20 @@ main > section:last-of-type {
 }
 
 #services {
-    background-color: var(--section-alternate-bg); /* New light grey */
+    background-color: var(--section-alternate-bg);
 }
 
 #patient-guide {
-    background-color: var(--alternate-section-color); /* Light blue */
+    background-color: var(--alternate-section-color);
 }
 
 #about-us {
-    background-color: var(--section-alternate-bg); /* New light grey */
+    background-color: var(--section-alternate-bg);
 }
 
 .hero h2 {
     margin: 0 0 1rem;
-    font-size: 2.5rem; /* Smaller font size for hero heading */
+    font-size: 2.4rem; /* Adjusted size */
     font-weight: 700;
 }
 
@@ -134,7 +138,7 @@ main > section:last-of-type {
     background-color: var(--primary-color);
     color: var(--text-color-light);
     padding: 14px 35px;
-    border-radius: var(--border-radius);
+    border-radius: 12px; /* Slightly larger border-radius */
     text-decoration: none;
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -148,7 +152,7 @@ main > section:last-of-type {
 section h2 {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2.4rem;
+    font-size: 2.2rem; /* Adjusted size */
 }
 
 .service-items {
@@ -163,17 +167,18 @@ section h2 {
 
 .service-item {
     text-align: center;
-    padding: 30px;
-    border: 2px solid #c0c8d4; /* Thicker and slightly darker border */
+    padding: 25px; /* Slightly reduced padding */
+    border: 2px solid #c0c8d4;
     border-radius: var(--border-radius);
-    background-color: #ffffff; /* White background to make it pop */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Subtle shadow */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Added transform */
 }
 
 .service-item:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* More pronounced shadow on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transform: translateY(-3px); /* Subtle hover effect */
 }
 
 .service-item svg {
@@ -182,7 +187,7 @@ section h2 {
 }
 
 .service-item h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem; /* Adjusted size */
     margin-bottom: 1rem;
 }
 
@@ -202,7 +207,7 @@ section h2 {
 footer {
     background-color: #1a2327;
     color: #eeeeee;
-    padding: 4rem 0 0;
+    padding: 3rem 0; /* Adjusted padding */
 }
 
 footer .container {
@@ -210,12 +215,12 @@ footer .container {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem; /* Adjusted padding */
 }
 
 footer h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
+    font-size: 1.2rem; /* Adjusted size */
+    margin-bottom: 1rem;
     color: var(--accent-color);
 }
 
@@ -236,7 +241,7 @@ footer a:hover {
     color: #9e9e9e;
     text-align: center;
     padding: 1.2rem 0;
-    margin-top: 2rem;
+    margin-top: 1.5rem; /* Adjusted margin */
     font-size: 0.9rem;
 }
 
@@ -245,7 +250,7 @@ footer a:hover {
     align-items: center;
     gap: 0.8rem;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem; /* Adjusted margin */
     color: #bdbdbd;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -293,10 +298,10 @@ footer a:hover {
     }
 
     .service-items {
-        grid-template-columns: 1fr; /* Stack cards vertically */
+        grid-template-columns: 1fr;
     }
 
     .service-items.four-items {
-        grid-template-columns: 1fr; /* Ensure four-item section stacks vertically */
+        grid-template-columns: 1fr;
     }
 }
