@@ -164,14 +164,16 @@ section h2 {
 .service-item {
     text-align: center;
     padding: 30px;
-    border: 1px solid #d1d9e6;
+    border: 2px solid #c0c8d4; /* Thicker and slightly darker border */
     border-radius: var(--border-radius);
-    background-color: transparent;
-    transition: border-color 0.3s ease;
+    background-color: #ffffff; /* White background to make it pop */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* More pronounced shadow on hover */
 }
 
 .service-item svg {
